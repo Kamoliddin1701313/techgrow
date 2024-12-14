@@ -35,7 +35,7 @@ function ContactUs() {
         </div>
 
         <Modal
-          className="md:w-4/5"
+          className=""
           title="Menejerga murojaat qiling"
           open={isModalOpen}
           footer={null}

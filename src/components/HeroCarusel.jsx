@@ -142,7 +142,7 @@ function HeroCarusel() {
                 <div className="h-full flex flex-col justify-center w-3/5">
                   <Link
                     to={value.pageLink}
-                    className="text-[#222] block text-[36px] leading-10 font-light mb-4 mt-12 xl:text-[30px] lg:text-[26px] lg:leading-8 md:text-[22px]"
+                    className="text-[#222] block text-[36px] leading-10 font-light mb-4 mt-12 xl:text-[30px] lg:text-[26px] lg:leading-8 md:text-[22px] sm:mt-10 sm:leading-7 sm:mb-2"
                   >
                     {value.caruselTitle}
                   </Link>
@@ -193,7 +193,7 @@ function HeroCarusel() {
                   <img
                     src={value.img}
                     alt="carousel"
-                    className="h-[300px] max-w-[400px] lg:w-[300px] md:w-[200px] object-contain"
+                    className="h-[300px] max-w-[400px] lg:w-[300px] md:w-[200px] sm:w-[160px] object-contain"
                   />
                 </div>
               </div>

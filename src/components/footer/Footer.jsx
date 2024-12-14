@@ -13,7 +13,7 @@ export default function Footer() {
         karta orqali to'lash
       </h1>
 
-      <div className="flex justify-between items-start gap-8 lg:gap-4 md:grid md:grid-cols-3">
+      <div className="flex justify-between items-start gap-8 lg:gap-4 md:grid md:grid-cols-3 sm:grid-cols-2">
         <div className="grid grid-cols-1 w-1/4 gap-3 md:w-full">
           <div className="w-full h-[1px] bg-[#ddd]"></div>
 
@@ -124,7 +124,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <p className="text-[#444] my-8 text-[14px] font-normal">
+      <p className="text-[#444] my-8 text-[14px] font-normal max-w-full break-words">
         Softline o'quv markazi geografiya va vaqt zonalari bilan cheklanmagan;
         Shaxsiy darslar Moskvada ishlaydi ,
         <Link to="/" className="text-[#cb0f41]">

@@ -70,57 +70,57 @@ function Card() {
           </h1>
           <div className="grid grid-cols-4 gap-8 py-5 lg:gap-4 md:grid-cols-2">
             <div>
-              <img src={main1} alt="main1" />
-              <p className="text-[#444] mb-[14px] text-[18px] py-2 xl:text-[16px]">
+              <img src={main1} alt="main1" className="sm:mx-auto" />
+              <p className="text-[#444] mb-[14px] text-[18px] py-2 xl:text-[16px] sm:text-center">
                 Bozorda qo'shimcha ta'lim
               </p>
             </div>
 
             <div>
-              <img src={main2} alt="main2" />
-              <p className="text-[#444] mb-[14px] text-[18px] py-2 xl:text-[16px]">
+              <img src={main2} alt="main2" className="sm:mx-auto" />
+              <p className="text-[#444] mb-[14px] text-[18px] py-2 xl:text-[16px] sm:text-center">
                 Imkoniyat har qandayidan o'rganish dunyo nuqtalari
               </p>
             </div>
 
             <div>
-              <img src={main3} alt="main3" />
-              <p className="text-[#444] mb-[14px] text-[18px] py-2 xl:text-[16px]">
+              <img src={main3} alt="main3" className="sm:mx-auto" />
+              <p className="text-[#444] mb-[14px] text-[18px] py-2 xl:text-[16px] sm:text-center">
                 Litsenziya ta'lim uchun faoliyat
               </p>
             </div>
 
             <div>
-              <img src={main4} alt="main4" />
-              <p className="text-[#444] mb-[14px] text-[18px] py-2 xl:text-[16px]">
+              <img src={main4} alt="main4" className="sm:mx-auto" />
+              <p className="text-[#444] mb-[14px] text-[18px] py-2 xl:text-[16px] sm:text-center">
                 Ruxsatnomalar yetakchi dasturiy ta'minot ishlab chiqaruvchilari
               </p>
             </div>
 
             <div>
-              <img src={main5} alt="main5" />
-              <p className="text-[#444] mb-[14px] text-[18px] py-2 xl:text-[16px]">
+              <img src={main5} alt="main5" className="sm:mx-auto" />
+              <p className="text-[#444] mb-[14px] text-[18px] py-2 xl:text-[16px] sm:text-center">
                 Eng yaxshi murabbiylar boy amaliy tajribaga ega
               </p>
             </div>
 
             <div>
-              <img src={main6} alt="main6" />
-              <p className="text-[#444] mb-[14px] text-[18px] py-2 xl:text-[16px]">
+              <img src={main6} alt="main6" className="sm:mx-auto" />
+              <p className="text-[#444] mb-[14px] text-[18px] py-2 xl:text-[16px] sm:text-center">
                 Xalqaro markazlarda sertifikatlar Softline testi
               </p>
             </div>
 
             <div>
-              <img src={main7} alt="main7" />
-              <p className="text-[#444] mb-[14px] text-[18px] py-2 xl:text-[16px]">
+              <img src={main7} alt="main7" className="sm:mx-auto" />
+              <p className="text-[#444] mb-[14px] text-[18px] py-2 xl:text-[16px] sm:text-center">
                 O‘quv xonalari jihozlangan yuqori texnologiya uskunalar
               </p>
             </div>
 
             <div>
-              <img src={main8} alt="main8" />
-              <p className="text-[#444] mb-[14px] text-[18px] py-2 xl:text-[16px]">
+              <img src={main8} alt="main8" className="sm:mx-auto" />
+              <p className="text-[#444] mb-[14px] text-[18px] py-2 xl:text-[16px] sm:text-center">
                 Moslashtirilgan moslashuvchan o'qitish yondashuvi korporativ
                 mijozlar
               </p>

@@ -21,6 +21,8 @@ export default function Home() {
       <ITCoursesHub />
       <TrustedByClients />
       <StayUpdated />
+
+      {/*  */}
       {/* <ContactDetails /> */}
     </div>
   );

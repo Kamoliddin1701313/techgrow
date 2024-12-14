@@ -207,7 +207,7 @@ function ITCoursesHub() {
       </h1>
 
       <div className="grid grid-cols-5 gap-10 mt-10 justify-between lg:gap-4 md:grid-cols-3 sm:grid-cols-2">
-        <div>
+        <div className="sm:w-full">
           <img src={pukin} alt="pukin" />
           <p className="my-2 text-[16px] lg:text-[14px] text-[#222] font-bold">
             <Link to="/">Pukin Aleksandr Izrailevich</Link>
@@ -217,7 +217,7 @@ function ITCoursesHub() {
           </p>
         </div>
 
-        <div>
+        <div className="sm:w-full">
           <img src={perminova} alt="perminova" />
           <p className="my-2 text-[16px] text-[#222] font-bold lg:text-[14px]">
             <Link to="/">Perminova Yuliya Veniaminovna</Link>
@@ -227,7 +227,7 @@ function ITCoursesHub() {
           </p>
         </div>
 
-        <div>
+        <div className="sm:w-full">
           <img src={aliksey} alt="aliksey" />
           <p className="my-2 text-[16px] text-[#222] font-bold lg:text-[14px]">
             <Link to="/">Lebedev Yuriy Mixaylovich</Link>
@@ -237,7 +237,7 @@ function ITCoursesHub() {
           </p>
         </div>
 
-        <div>
+        <div className="sm:w-full">
           <img src={andrey} alt="andrey" />
           <p className="my-2 text-[16px] text-[#222] font-bold lg:text-[14px]">
             <Link to="/">Motin Dmitriy Olegovich</Link>
@@ -247,7 +247,7 @@ function ITCoursesHub() {
           </p>
         </div>
 
-        <div>
+        <div className="sm:w-full">
           <img src={john} alt="john" />
           <p className="my-2 text-[16px] text-[#222] font-bold lg:text-[14px]">
             <Link to="/">Gorskiy Sergey Aleksandrovich</Link>
