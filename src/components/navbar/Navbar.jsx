@@ -28,6 +28,22 @@ export default function Navbar() {
     setIsModalOpen(false);
   };
 
+  const [modalWidth, setModalWidth] = useState("90%");
+
+  useEffect(() => {
+    const updateWidth = () => {
+      if (window.innerWidth >= 992) {
+        setModalWidth("60%");
+      } else {
+        setModalWidth("80%");
+      }
+    };
+
+    window.addEventListener("resize", updateWidth);
+    updateWidth();
+    return () => window.removeEventListener("resize", updateWidth);
+  }, []);
+
   const [topBar, setTopBar] = useState(false);
   const [navBar, setNavBar] = useState(false);
 
@@ -47,6 +63,8 @@ export default function Navbar() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  const [modalOpen, setModalOpen] = useState(false);
 
   return (
     <div className={`w-full bg-white relative z-30`}>
@@ -72,7 +90,7 @@ export default function Navbar() {
         <div className={`bg-[#f2f2f2] md:-mt-9 sm:-mt-9`}>
           <div className="flex justify-between items-center max-w-[1200px] h-[65px] mx-auto xl:px-3 relative md:mt-9">
             <div className="flex justify-between items-center gap-5 xl:gap-3">
-              <Link>
+              <Link to="/">
                 <img
                   className="h-[60px] xl:w-[80px] hover:opacity-50"
                   src={softlinelogo}
@@ -80,7 +98,7 @@ export default function Navbar() {
                 />
               </Link>
 
-              <Link className="hover:opacity-50 xl:w-[130px]">
+              <Link to="/" className="hover:opacity-50 xl:w-[130px]">
                 <img src={edulogo} alt="edulogo" />
               </Link>
 
@@ -106,6 +124,7 @@ export default function Navbar() {
 
             <div className="flex justify-between items-center gap-5 xl:gap-3">
               <Link
+                onClick={() => setModalOpen(true)}
                 to="/"
                 className="text-[#cb0f41] font-semibold hover:opacity-50 xl:text-[13px] lg:hidden"
               >
@@ -113,7 +132,7 @@ export default function Navbar() {
               </Link>
 
               <Link
-                to="/"
+                to="/registration"
                 className="flex text-[#444] items-center gap-3 hover:opacity-50 lg:hidden"
               >
                 <span>
@@ -147,7 +166,6 @@ export default function Navbar() {
             >
               edusales@softline.com
             </a>
-
             <span className="flex items-center gap-[10px]">
               <span className="w-[42px] h-[42px] rounded-[50%] border-[1px] border-[#dedede] flex items-center justify-center xl:w-[36px] xl:h-[36px] md:hidden">
                 <LuPhone className="text-[#cb0f41] font-semibold text-[20px] xl:text-[15px]" />
@@ -159,16 +177,15 @@ export default function Navbar() {
                 8 800 505 05 07
               </a>
             </span>
-
             <Link
+              onClick={() => setModalOpen(true)}
               to="/"
               className="text-[#cb0f41] font-semibold hover:opacity-50 xl:text-[13px]"
             >
               Yangiliklarga obuna bo'ling
             </Link>
-
             <Link
-              to="/"
+              to="/registration"
               className="flex text-[#444] items-center gap-3 hover:opacity-50"
             >
               <span className="md:hidden">
@@ -334,6 +351,49 @@ export default function Navbar() {
         {/* Hiddindagi buttonlar */}
       </nav>
 
+      {/* yangiliklar modali */}
+      <Modal
+        centered
+        open={modalOpen}
+        onOk={() => setModalOpen(false)}
+        onCancel={() => setModalOpen(false)}
+        footer={null}
+        width={modalWidth}
+      >
+        <h1 className="text-[#cb0f41] text-[28px] font-semibold px-6">
+          Yangiliklarga obuna bo'ling
+        </h1>
+        <p className="px-6 text-[#0a0a0a] my-6">
+          Elektron pochta manzilingizni qoldiring va biznesni rivojlantirish
+          uchun asosiy IT tendentsiyalaridan xabardor bo'ling.
+        </p>
+        <form className="px-6">
+          <div className="flex items-center justify-between gap-5">
+            <input
+              required
+              type="text"
+              placeholder="Sizning elektron pochtangiz"
+              className="h-[42px] outline-none border-[1px] border-[#c1c1c1] px-[14px] w-[60%]"
+            />
+            <button className="w-[40%] bg-[#cb0f41] h-[42px] rounded-[6px] uppercase text-white">
+              Obuna boʻling
+            </button>
+          </div>
+          <div className="my-6 flex items-start gap-3">
+            <input
+              type="checkbox"
+              onChange={(e) => console.log(e.target.checked)}
+            />
+            <Link to="/" className="text-[#cb0f41] text-[12px]">
+              Men Shaxsiy ma'lumotlarning maxfiyligi siyosatini o'qib chiqdim va
+              shaxsiy ma'lumotlarni qayta ishlashga roziman
+            </Link>
+          </div>
+        </form>
+      </Modal>
+
+      {/* yangiliklar modali */}
+
       <div
         className={`${
           scrolled && "fixed top-[66px] xl:top-[62px] mx-auto w-full bg-white"
@@ -350,11 +410,11 @@ export default function Navbar() {
       </div>
 
       <Modal
-        className="md:w-4/5"
+        centered
         open={isModalOpen}
         footer={null}
         onCancel={handleCancel}
-        width="60%"
+        width={modalWidth}
       >
         <form className="grid grid-cols-1 p-6 gap-3 md:p-0 lg:p-2">
           <h1 className="text-[28px] font-semibold text-[#cb0f41]">

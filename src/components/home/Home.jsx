@@ -1,5 +1,4 @@
 import AllOffersAndDeals from "../../pages/allOffersAndDeals/AllOffersAndDeals";
-import ContactDetails from "../../pages/contactDetails/ContactDetails";
 import ContactUs from "../../pages/contactUs/ContactUs";
 import CoursesSection from "../../pages/coursesSection/CoursesSection";
 import ITCoursesHub from "../../pages/itCoursesHub/ITCoursesHub";
@@ -21,9 +20,6 @@ export default function Home() {
       <ITCoursesHub />
       <TrustedByClients />
       <StayUpdated />
-
-      {/*  */}
-      {/* <ContactDetails /> */}
     </div>
   );
 }

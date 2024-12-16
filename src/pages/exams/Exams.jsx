@@ -3,12 +3,12 @@ import { Link } from "react-router-dom";
 
 function Exams({ setOnHoverTab }) {
   return (
-    <div className={`pt-10 pb-20`}>
-      <div className="max-w-[1200px] mx-auto relative">
+    <div className={`pt-5 pb-20`}>
+      <div className="max-w-[1200px] mx-auto relative xl:px-3">
         <span className="text-[18px] font-bold text-[#B62C46]">Экзамены</span>
 
         <button
-          className="absolute right-0 w-[12%] font-semibold rounded-[10px] border-[1px] border-[#444] text-[#B62C46]"
+          className="absolute right-0 w-[12%] lg:w-[18%] md:w-1/4 xl:right-3 font-semibold rounded-[10px] border-[1px] border-[#444] text-[#B62C46]"
           onClick={() => setOnHoverTab("0")}
         >
           Go Back

@@ -6,6 +6,7 @@ import News from "./pages/news/News";
 import NewsDetail from "./pages/newsDetail/NewsDetail";
 import ScheduledCourses from "./pages/scheduledCourses/ScheduledCourses";
 import CourseCatalog from "./pages/courseCatalog/CourseCatalog";
+import Registration from "./pages/registration/Registration";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/news/:id" element={<NewsDetail />} />
           <Route path="/schedule" element={<ScheduledCourses />} />
           <Route path="/vendors" element={<CourseCatalog />} />
+          <Route path="/registration" element={<Registration />} />
         </Route>
       </Routes>
     </div>

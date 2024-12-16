@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 
 function OurStory({ setOnHoverTab }) {
   return (
-    <div className={`pt-10 pb-20`}>
-      <div className="w-full flex justify-between relative items-start max-w-[1200px] mx-auto gap-4 xl:px-3 md:gap-2 md:grid md:grid-cols-2">
+    <div className={`pt-5 pb-20`}>
+      <div className="w-full flex justify-between relative items-start max-w-[1200px] mx-auto gap-4 xl:px-3 md:gap-2 md:grid md:grid-cols-2 md:gap-y-10">
         <div className="grid grid-cols-1 gap-4 rounded-[20px] w-full gap-y-2 text-[14px]">
           <Link to="/">Учебный центр Softline</Link>
           <Link to="/">Миссия и ценности</Link>

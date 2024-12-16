@@ -1,9 +1,27 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import bgblur from "../../assets/images/bg-blur.png";
-import { Button, Modal } from "antd";
+import { Modal } from "antd";
 
 function ContactUs() {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [modalWidth, setModalWidth] = useState("90%");
+
+  useEffect(() => {
+    const updateWidth = () => {
+      if (window.innerWidth >= 992) {
+        setModalWidth("40%");
+      } else if (window.innerWidth >= 768) {
+        setModalWidth("60%");
+      } else {
+        setModalWidth("80%");
+      }
+    };
+
+    window.addEventListener("resize", updateWidth);
+    updateWidth();
+    return () => window.removeEventListener("resize", updateWidth);
+  }, []);
+
   const showModal = () => {
     setIsModalOpen(true);
   };
@@ -35,12 +53,12 @@ function ContactUs() {
         </div>
 
         <Modal
-          className=""
+          centered
           title="Menejerga murojaat qiling"
           open={isModalOpen}
           footer={null}
           onCancel={handleCancel}
-          width="60%"
+          width={modalWidth}
         >
           <form className="grid grid-cols-1 p-6 gap-3 md:p-0 lg:p-2">
             <div>

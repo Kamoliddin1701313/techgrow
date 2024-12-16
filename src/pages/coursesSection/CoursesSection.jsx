@@ -53,7 +53,7 @@ function CoursesSection() {
           </button>
 
           <button className="h-full uppercase text-[#a1a1a1] hover:text-[#cb0f41] text-[18px] lg:text-[14px] md:text-[12px] md:lowercase">
-            <Link to="/schedule">Barcha kurslarwwww</Link>
+            <Link to="/schedule">Barcha kurslar</Link>
           </button>
         </div>
 

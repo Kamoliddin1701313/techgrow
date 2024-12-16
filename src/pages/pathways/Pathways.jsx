@@ -3,21 +3,21 @@ import { Link } from "react-router-dom";
 
 function Pathways({ setOnHoverTab }) {
   return (
-    <div className={`pt-10 pb-20`}>
-      <div className="max-w-[1200px] mx-auto relative">
+    <div className={`pt-5 pb-20`}>
+      <div className="max-w-[1200px] mx-auto relative xl:px-3 lg:h-screen">
         <span className="text-[18px] font-bold text-[#B62C46]">
           Направления
         </span>
 
         <button
-          className="absolute right-0 w-[12%] font-semibold rounded-[10px] border-[1px] border-[#444] text-[#B62C46]"
+          className="absolute right-0 w-[12%] lg:w-[18%] md:w-1/4 xl:right-3 font-semibold rounded-[10px] border-[1px] border-[#444] text-[#B62C46]"
           onClick={() => setOnHoverTab("0")}
         >
           Go Back
         </button>
         <div className="w-full h-[2px] bg-gray-400 my-5"></div>
 
-        <div className="w-full flex justify-between items-start gap-4">
+        <div className="w-full grid grid-cols-4 justify-between items-start gap-4 lg:grid-cols-3 lg:z-20 relative md:grid-cols-2 gap-y-10">
           <div className="grid grid-cols-1 gap-4 rounded-[20px] w-full gap-y-2 text-[14px]">
             <Link to="/"> Обучение по работе на российском ПО</Link>
             <Link to="/">Виртуализация</Link>
